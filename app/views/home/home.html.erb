@@ -1,0 +1,25 @@
+<% provide(:title, "Home") %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title><%= yield(:title) %> | Softtennis App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="background-images">
+      <div class="background-image-1 background-image img-fluid"></div>
+      <div class="background-image-2 background-image img-fluid"></div>
+      <div class="background-image-3 background-image img-fluid"></div>
+      <div class="background-image-4 background-image img-fluid"></div>
+    </div>
+    <div class="home-app-logo">
+      <%= image_tag "ST-Lab2.png", class: "home-app-logo-imag" %>
+    </div>
+  </body>
+</html>

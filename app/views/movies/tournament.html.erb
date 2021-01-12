@@ -1,0 +1,120 @@
+<% provide(:title, @t) %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title><%= yield(:title) %> | Softtennis App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'movies', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="top">
+        <div class="title">
+          <%= @t %>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="search">
+          <%= form_tag("/movies/search", :method => 'get') do %>
+            <%= text_field_tag :search, params[:search], placeholder: "選手名で検索", class: "text_field" %>
+            <%= submit_tag "検索", :name => nil, class: "submit" %>
+          <% end %>
+        </div>
+
+        <% @rounds.each do |r| %>
+
+          <% if !r.empty? %>
+            <div class="round">
+              <% if r==@finals %>
+                <div class="round-name">決勝</div>
+              <% end %>
+              <% if r==@finalleague %>
+                <div class="round-name">決勝リーグ</div>
+              <% end %>
+              <% if r==@thirdplace %>
+                <div class="round-name">3位決定戦</div>
+              <% end %>
+              <% if r==@semifinals %>
+                <div class="round-name">準決勝</div>
+              <% end %>
+              <% if r==@fifthplace %>
+                <div class="round-name">5,6位決定戦</div>
+              <% end %>
+              <% if r==@seventhplace %>
+                <div class="round-name">7,8位決定戦</div>
+              <% end %>
+              <% if r==@quarterfinals %>
+                <div class="round-name">準々決勝</div>
+              <% end %>
+              <% if r==@seventh %>
+                <div class="round-name">7回戦</div>
+              <% end %>
+              <% if r==@sixth %>
+                <div class="round-name">6回戦</div>
+              <% end %>
+              <% if r==@fifth %>
+                <div class="round-name">5回戦</div>
+              <% end %>
+              <% if r==@fourth %>
+                <div class="round-name">4回戦</div>
+              <% end %>
+              <% if r==@third %>
+                <div class="round-name">3回戦</div>
+              <% end %>
+              <% if r==@second %>
+                <div class="round-name">2回戦</div>
+              <% end %>
+              <% if r==@first %>
+                <div class="round-name">1回戦</div>
+              <% end %>
+              <% if r==@leagueA %>
+                <div class="round-name">予選Aリーグ</div>
+              <% end %>
+              <% if r==@leagueB %>
+                <div class="round-name">予選Bリーグ</div>
+              <% end %>
+              <% if r==@leagueC %>
+                <div class="round-name">予選Cリーグ</div>
+              <% end %>
+              <% if r==@leagueD %>
+                <div class="round-name">予選Dリーグ</div>
+              <% end %>
+
+              <div class="matches">
+                <% r.each do |m| %>
+                    <% if m.teams==1 %>
+                      <div class="teams">
+                        <div class="team1 teams-component"><%= m.team1 %></div>
+                        <div class="teams-component"><%= m.score1 %><a> - </a><%= m.score2 %></div>
+                        <div class="team2 teams-component"><%= m.team2 %></div>
+                      </div>
+                    <% elsif %>
+                      <div class="match">
+                        <div class="name1 match-component"><%= m.name1 %></div>
+                        <div class="game match-component"><%= m.game1 %><a> - </a><%= m.game2 %></div>
+                        <div class="name2 match-component"><%= m.name2 %></div>
+                        <div class="url match-component">
+                          <% if !m.url.empty? %>
+                            <%= link_to " 試合動画",m.url,class: 'movielink fab fa-youtube', target: :_blank %>
+                          <% elsif %>
+                            <a class="no-movielink fab fa-youtube"> 試合動画</a>
+                          <% end %>
+                        </div>
+                      </div>
+                    <% end %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>

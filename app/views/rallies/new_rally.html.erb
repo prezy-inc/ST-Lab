@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title><%= yield(:title) %> | Softtennis App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'matches', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="box">
+      <%= form_with(model: @rally, local: true) do |f| %>
+
+        <div>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+
+        <div>
+          <%= f.label :url %>
+          <%= f.text_field :url %>
+        </div>
+
+        <div>
+          <%= f.label :img %>
+          <%= f.text_field :img %>
+        </div>
+
+        <div>
+          <%= f.submit "add a new rally" %>
+        </div>
+
+      <% end %>
+    </div>
+  </body>
+</html>

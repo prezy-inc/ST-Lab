@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title><%= yield(:title) %> | Softtennis App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'matches', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="box">
+      <% @matches.each do |match| %>
+        <a>id : </a><%= match.id %>
+        <a> | year : </a><%= match.year %>
+        <a> | tournament : </a><%= match.tournament %>
+        <a> | round : </a><%= match.round %>
+        <a> | order : </a><%= match.order %>
+        <a> | </a><%= match.name1 %>
+        <a>vs</a><%= match.name2 %>
+        <a> | </a><%= match.game1 %>
+        <a>-</a><%= match.game2 %>
+        <a> | url : </a><%= match.url %>
+        <a> | teams : </a><%= match.teams %>
+        <a> | </a><%= match.team1 %>
+        <a>vs</a><%= match.team2 %>
+        <a> | </a><%= match.score1 %>
+        <a>-</a><%= match.score2 %>
+        <a> | </a><%= link_to "edit", "/#{match.id}/edit" %>
+        <p>----------------------------------------------------------------------------</p>
+      <% end %>
+    </div>
+  </body>
+</html>

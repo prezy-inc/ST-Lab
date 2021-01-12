@@ -1,0 +1,162 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+//home.html, about.html共通
+body{
+}
+
+.background-images{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  .background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    animation: bgAnime 20s infinite;
+  }
+}
+
+
+//home.html
+.background-images{
+  .background-image-1{
+    background-image: url(background1.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .background-image-2{
+    background-image: url(background2.png);
+    background-position: center;
+    background-size: cover;
+    animation-delay: 5s;
+  }
+  .background-image-3{
+    background-image: url(background3.png);
+    background-position: center;
+    background-size: cover;
+    animation-delay: 10s;
+  }
+  .background-image-4{
+    background-image: url(background4.png);
+    background-position: center;
+    background-size: cover;
+    animation-delay: 15s;
+  }
+  @keyframes bgAnime{
+    0%{opacity: 0;}
+    5%{opacity: 1;}
+    25%{opacity: 1;}
+    30%{opacity: 0;}
+    100%{opacity: 0;}
+  }
+}
+
+.home-app-logo{
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 11;
+}
+
+
+//about.html
+.container{
+  text-align: center;
+}
+
+.about-main{
+  width: 100%;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 11;
+  text-align: center;
+}
+
+.msgs{
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  @media (min-width: 992px){
+    background: rgba(255, 255, 255, 0.6);
+    width: 65%;
+  }
+  @media (max-width: 992px){
+    background: rgba(255, 255, 255, 0.7);
+    width: 90%;
+    position: relative;
+    top: -80px;
+  }
+  .msg{
+    display: inline-block;
+    //width: 100%;
+    margin: 5px;
+    @media (min-width: 992px){
+    }
+    @media (max-width: 992px){
+      font-size: 25px;
+    }
+  }
+}
+
+.about-app-logo{
+  display: inline-block;
+  width: 100%;
+  .about-app-logo-imag{
+    @media (min-width: 992px){
+      width: 30%;
+    }
+    @media (max-width: 992px){
+      width: 50%;
+    }
+  }
+}
+
+.background-images{
+  @media (max-width: 992px){
+    min-height: 700px;
+  }
+  .background-image-5{
+    background-image: url(background5.png);
+    background-position: 35% center; //野島さんが見えるように
+    background-size: cover;
+  }
+  .background-image-6{
+    background-image: url(background6.png);
+    background-position: center;
+    background-size: cover;
+    animation-delay: 5s;
+  }
+  .background-image-7{
+    background-image: url(background7.png);
+    background-position: center;
+    background-size: cover;
+    animation-delay: 10s;
+  }
+  .background-image-8{
+    background-image: url(background8.png);
+    background-position: 70% center; //俺が見えるように
+    background-size: cover;
+    animation-delay: 15s;
+  }
+
+  @keyframes bgAnime{
+    0%{opacity: 0;}
+    5%{opacity: 1;}
+    25%{opacity: 1;}
+    30%{opacity: 0;}
+    100%{opacity: 0;}
+  }
+}

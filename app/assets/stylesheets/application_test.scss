@@ -1,0 +1,131 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap";
+
+.no-gutters{ //colの余白をなくす
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html{
+  //height: 100%;
+}
+body{
+  //height: 100%;
+}
+
+.container-fluid{
+  padding: 0;
+  margin: 0;
+}
+
+.row{
+  //height: 100%;
+}
+
+.col-lg-2{
+  @media (min-width: 992px){
+  }
+  @media (max-width: 992px){
+  }
+}
+
+.navbar{
+  padding: 0;
+  position: absolute;
+  top: 0;
+  display: block;
+  //width: 100%;
+}
+
+.app-logo{
+  //width: 100%;
+  .app-logo-img{
+    width: 100%;
+    @media (min-width: 992px){
+    }
+    @media (max-width: 992px){
+    }
+  }
+}
+.sns{
+  //width: 100%;
+  @media (min-width: 992px){
+    text-align: center;
+  }
+  @media (max-width: 992px){
+  }
+  .icon{
+    display: inline-block;
+    color: #cccccc;
+    @media (min-width: 992px){
+      font-size: 40px;
+    }
+    @media (max-width: 992px){
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.menubar_fixed {
+}
+.navbar-collapse{
+  //width: 100%;
+}
+.navbar-nav{
+  //width: 100%;
+}
+.menu-box{
+  //width: 100%;
+  display: inline-block;
+}
+.menu{
+  @media (min-width: 992px){
+  }
+  @media (max-width: 992px){ //iPhoneで、メニューを押しやすいように高さを広げる
+  }
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.col-lg{
+  @media (min-width: 992px){
+  }
+  @media (max-width: 992px){
+  }
+}
+
+.years-menu{
+    @media (min-width: 992px){
+    }
+    @media (max-width: 992px){
+    }
+  .year-menu{
+    .year-menu-link{
+      @media (min-width: 992px){
+      }
+      @media (max-width: 992px){ //iPhoneで、メニューを押しやすいように高さを広げる
+      }
+      &:hover{
+      }
+    }
+  }
+}

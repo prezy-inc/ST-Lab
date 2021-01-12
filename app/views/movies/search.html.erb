@@ -1,0 +1,115 @@
+<% provide(:title, "Search") %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title><%= yield(:title) %> | Softtennis App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'movies', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="box">
+      <div class="top">
+        <div class="title">
+          検索結果("<%= @key %>")
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="search">
+          <%= form_tag("/movies/search", :method => 'get') do %>
+            <%= text_field_tag :search, params[:search], placeholder: "選手名で検索", class: "text_field" %>
+            <%= submit_tag "検索", :name => nil, class: "submit" %>
+          <% end %>
+        </div>
+
+        <% @tournaments.each do |t| %>
+          <div class="tournament">
+            <%= t %>
+          </div>
+          <% @matches.each do |m| %>
+            <% if m.tournament==t %>
+              <div class="round">
+                <% if m.round==100 %>
+                  <div class="round-name">決勝</div>
+                <% end %>
+                <% if m.round==101 %>
+                  <div class="round-name">決勝リーグ</div>
+                <% end %>
+                <% if m.round==34 %>
+                  <div class="round-name">3位決定戦</div>
+                <% end %>
+                <% if m.round==95 %>
+                  <div class="round-name">準決勝</div>
+                <% end %>
+                <% if m.round==56 %>
+                  <div class="round-name">5,6位決定戦</div>
+                <% end %>
+                <% if m.round==78 %>
+                  <div class="round-name">7,8位決定戦</div>
+                <% end %>
+                <% if m.round==5678 %>
+                  <div class="round-name">5〜8位決定戦予備戦</div>
+                <% end %>
+                <% if m.round==90 %>
+                  <div class="round-name">準々決勝</div>
+                <% end %>
+                <% if m.round==7 %>
+                  <div class="round-name">7回戦</div>
+                <% end %>
+                <% if m.round==6 %>
+                  <div class="round-name">6回戦</div>
+                <% end %>
+                <% if m.round==5 %>
+                  <div class="round-name">5回戦</div>
+                <% end %>
+                <% if m.round==4 %>
+                  <div class="round-name">4回戦</div>
+                <% end %>
+                <% if m.round==3 %>
+                  <div class="round-name">3回戦</div>
+                <% end %>
+                <% if m.round==2 %>
+                  <div class="round-name">2回戦</div>
+                <% end %>
+                <% if m.round==1 %>
+                  <div class="round-name">1回戦</div>
+                <% end %>
+                <% if m.round==11 %>
+                  <div class="round-name">予選Aリーグ</div>
+                <% end %>
+                <% if m.round==12 %>
+                  <div class="round-name">予選Bリーグ</div>
+                <% end %>
+                <% if m.round==13 %>
+                  <div class="round-name">予選Cリーグ</div>
+                <% end %>
+                <% if m.round==14 %>
+                  <div class="round-name">予選Dリーグ</div>
+                <% end %>
+                <div class="matches">
+                  <div class="match">
+                    <div class="name1 match-component col-3"><%= m.name1 %></div>
+                    <div class="match-component col-1"><%= m.game1 %><a> - </a><%= m.game2 %></div>
+                    <div class="name2 match-component col-3"><%= m.name2 %></div>
+                    <div class="url match-component col-3">
+                      <% if !m.url.empty? %>
+                        <%= link_to " 試合動画",m.url,class: 'movielink fab fa-youtube', target: :_blank %>
+                      <% elsif %>
+                        <a class="no-movielink fab fa-youtube"> 試合動画</a>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+
+    </div>
+  </body>
+</html>

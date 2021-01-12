@@ -1,0 +1,161 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap";
+
+.no-gutters{ //colの余白をなくす
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+
+.container-fluid{
+  padding: 0;
+  margin: 0;
+}
+
+.row{
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.col-lg-2{
+  margin-top: -25px;
+  @media (min-width: 992px){
+    min-height: 100%;
+    border-right: 1px solid #d3d3d3;
+    box-shadow: 1px 1px 5px #dddddd;
+  }
+  @media (max-width: 992px){
+    min-height: 30%;
+  }
+}
+
+.app-logo{
+  position: relative;
+  width: 100%;
+  text-align: center;  //iPhoneのとき、ロゴマークが中央に来るように
+  .app-logo-img{
+    @media (min-width: 992px){
+      width: 100%;
+    }
+    @media (max-width: 992px){
+      height: 100%;
+    }
+  }
+}
+.sns{
+  position: absolute;
+  @media (min-width: 992px){
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  @media (max-width: 992px){
+    bottom: 0;
+    right: 0;
+    padding-right: 10px;//二つのアイコンの位置関係を変えないまま左に少し動かした
+  }
+  .icon{
+    color: #cccccc;
+    @media (min-width: 992px){
+      font-size: 40px;
+      //padding-right: 10px;
+    }
+    @media (max-width: 992px){
+      font-size: 80px;
+      padding-right: 20px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.menubar_fixed {
+  position: sticky;
+  top: 0;
+  padding-left: 6px;
+  .menu-box{
+    width: 95%; //サイドに余白を持たせたい
+  }
+  .menu{
+    width: 100%;
+    padding: 4px;
+    display: inline-block;
+    color: #000000;
+    border-bottom: 1px solid #d3d3d3;
+    transition: all 0.3s;//緩やかに色を変える
+    @media (min-width: 992px){
+      font-weight: bold;
+    }
+    @media (max-width: 992px){ //iPhoneで、メニューを押しやすいように高さを広げる
+      line-height: 100px;
+      height: 100px;
+      font-size: 45px;
+      padding-left: 30px;
+    }
+    &:hover{
+      color: #778899;
+      text-decoration: none;
+    }
+  }
+}
+
+.col-lg{
+  @media (min-width: 992px){
+    min-height: 100%;
+  }
+  @media (max-width: 992px){
+    min-height: 90%;
+  }
+}
+
+.years-menu{
+    @media (min-width: 992px){
+      margin-left: 20px;
+    }
+    @media (max-width: 992px){
+      margin-left: 60px;
+    }
+  .year-menu{
+      border-bottom: 1px solid #d3d3d3;
+      padding-left: 6px;
+    .year-menu-link{
+      display: inline-block;
+      width: 100%;
+      color: black;
+      @media (min-width: 992px){
+      }
+      @media (max-width: 992px){ //iPhoneで、メニューを押しやすいように高さを広げる
+        line-height: 90px;
+        height: 90px;
+        font-size: 40px;
+      }
+      &:hover{
+        color: #778899;
+        text-decoration: none;
+      }
+    }
+  }
+}

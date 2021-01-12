@@ -1,0 +1,41 @@
+<% provide(:title, "Movies #{@y}") %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title><%= yield(:title) %> | Softtennis App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'movies', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="top">
+        <div class="title">
+          <%= "#{@y}年度大会" %>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="search">
+          <%= form_tag("/movies/search", :method => 'get') do %>
+            <%= text_field_tag :search, params[:search], placeholder: "選手名で検索", class: "text_field" %>
+            <%= submit_tag "検索", :name => nil, class: "submit" %>
+          <% end %>
+        </div>
+
+        <div class="buttons">
+          <div class="button">
+            <% @tournaments.each do |t| %>
+              <div class="button-detail">
+                <%= link_to "#{t}","/movies/#{@y}/#{t}",class: 'button-link' %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

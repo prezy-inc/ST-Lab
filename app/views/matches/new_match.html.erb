@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title><%= yield(:title) %> | Softtennis App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'matches', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="box">
+      <%= form_with(model: @match, local: true) do |f| %>
+
+        <div>
+          <%= f.label :year %>
+          <%= f.text_field :year %>
+        </div>
+
+        <div>
+          <%= f.label :tournament %>
+          <%= f.text_field :tournament %>
+        </div>
+
+        <div>
+          <%= f.label :round %>
+          <%= f.text_field :round %>
+        </div>
+
+        <div>
+          <%= f.label :order %>
+          <%= f.text_field :order %>
+        </div>
+
+        <div>
+          <%= f.label :teams %>
+          <%= f.text_field :teams %>
+        </div>
+
+        <div>
+          <%= f.label :team1 %>
+          <%= f.text_field :team1 %>
+        </div>
+
+        <div>
+          <%= f.label :team2 %>
+          <%= f.text_field :team2 %>
+        </div>
+
+        <div>
+          <%= f.label :score1 %>
+          <%= f.text_field :score1 %>
+        </div>
+
+        <div>
+          <%= f.label :score2 %>
+          <%= f.text_field :score2 %>
+        </div>
+
+        <div>
+          <%= f.label :name1 %>
+          <%= f.text_field :name1 %>
+        </div>
+
+        <div>
+          <%= f.label :name2 %>
+          <%= f.text_field :name2 %>
+
+        </div>
+
+        <div>
+          <%= f.label :game1 %>
+          <%= f.text_field :game1 %>
+        </div>
+
+        <div>
+          <%= f.label :game2 %>
+          <%= f.text_field :game2 %>
+        </div>
+
+        <div>
+          <%= f.label :url %>
+          <%= f.text_field :url %>
+        </div>
+
+        <div>
+          <%= f.submit "add a new match" %>
+        </div>
+
+      <% end %>
+    </div>
+  </body>
+</html>

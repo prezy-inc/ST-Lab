@@ -1,0 +1,35 @@
+<% provide(:title, "About") %>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title><%= yield(:title) %> | Softtennis App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+      <div class="background-images">
+        <div class="background-image-5 background-image img-fluid"></div>
+        <div class="background-image-6 background-image img-fluid"></div>
+        <div class="background-image-7 background-image img-fluid"></div>
+        <div class="background-image-8 background-image img-fluid"></div>
+      </div>
+      <div class="about-main">
+        <div class="about-app-logo">
+          <%= image_tag "ST-Lab2.png", class: "about-app-logo-imag" %>
+        </div>
+        <div class="msgs">
+          <div class="msg">
+            ST-Labはソフトテニスの動画をまとめるサイトです。<br>
+            ST-Labとは、Softtennis Laboratory (ソフトテニスラボ) の略称です。<br>
+            YouTube上にあるたくさんの試合動画を年度別、大会別に整理しました。<br>
+            皆さんのソフトテニスライフのお助けになれば幸いです。<br>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
