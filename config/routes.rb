@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/rallies' => 'home#rallies'
 
 
-  get '/new_match' => 'matches#new_match'
+  get '/hfisgfiygsdivhsugfsvjzcvyicsvwrvihbidsbos' => 'matches#new_match'
   get '/matches' => 'matches#matches'
   get '/:id/edit' => 'matches#edit'
 
