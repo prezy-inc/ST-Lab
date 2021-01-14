@@ -92,10 +92,10 @@
                 <% end %>
                 <div class="matches">
                   <div class="match">
-                    <div class="name1 match-component col-3"><%= m.name1 %></div>
-                    <div class="match-component col-1"><%= m.game1 %><a> - </a><%= m.game2 %></div>
-                    <div class="name2 match-component col-3"><%= m.name2 %></div>
-                    <div class="url match-component col-3">
+                    <div class="name1 match-component"><%= m.name1 %></div>
+                    <div class="match-component"><%= m.game1 %><a> - </a><%= m.game2 %></div>
+                    <div class="name2 match-component"><%= m.name2 %></div>
+                    <div class="url match-component">
                       <% if !m.url.empty? %>
                         <%= link_to " 試合動画",m.url,class: 'movielink fab fa-youtube', target: :_blank %>
                       <% elsif %>

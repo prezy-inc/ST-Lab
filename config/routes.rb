@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
 
   get '/hfisgfiygsdivhsugfsvjzcvyicsvwrvihbidsbos' => 'matches#new_match'
-  get '/matches' => 'matches#matches'
-  get '/:id/edit' => 'matches#edit'
+  get '/mahkfvadefbfhdbfhaeidyeqvfadgbhbfwevfiadf' => 'matches#matches'
+  get '/:id/hdvfuhaijbhsdbdfbiusdjehbdebdbfhbjbhb' => 'matches#edit'
 
   get '/movies/search' =>'movies#search'
   get '/movies/:year' =>'movies#year'
@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   get '/movies/search' =>'movies#search'
 
 
-  get '/new_rally' => 'rallies#new_rally'
-  get '/rally_list' => 'rallies#rally_list'
-  get '/:id/edit_rally' => 'rallies#edit_rally'
+  get '/hfbhdsbfbdjnaihuoehdbjuaeydjfeufbyefebufb' => 'rallies#new_rally'
+  get '/dhbfyagysnjshyedeuydednjahkaehdjaehdhaehd' => 'rallies#rally_list'
+  get '/:id/jkbfadufgyedaydvysuhbnhybedfheyfaefnb' => 'rallies#edit_rally'
 
   get 'rallies/:name' => 'rallies#player'
 
