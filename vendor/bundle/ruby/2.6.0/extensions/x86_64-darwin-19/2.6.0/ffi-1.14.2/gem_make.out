@@ -1,5 +1,5 @@
 current directory: /Users/takigawaatsushi/Documents/environment/softtennis_app/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
-/Users/takigawaatsushi/.rbenv/versions/2.6.5/bin/ruby -I /Users/takigawaatsushi/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20210130-40247-svciw9.rb extconf.rb
+/Users/takigawaatsushi/.rbenv/versions/2.6.6/bin/ruby -I /Users/takigawaatsushi/.rbenv/versions/2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210201-91126-1kxyktz.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... yes
 checking for ffi_prep_cif_var()... yes
 checking for ffi_raw_call()... yes
@@ -8,10 +8,10 @@ creating extconf.h
 creating Makefile
 
 current directory: /Users/takigawaatsushi/Documents/environment/softtennis_app/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
-make "DESTDIR=" clean
+make DESTDIR\= clean
 
 current directory: /Users/takigawaatsushi/Documents/environment/softtennis_app/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
-make "DESTDIR="
+make DESTDIR\=
 compiling AbstractMemory.c
 compiling ArrayType.c
 compiling Buffer.c
@@ -38,5 +38,5 @@ compiling ffi.c
 linking shared-object ffi_c.bundle
 
 current directory: /Users/takigawaatsushi/Documents/environment/softtennis_app/vendor/bundle/ruby/2.6.0/gems/ffi-1.14.2/ext/ffi_c
-make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20210130-40247-htcu7x
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20210201-91126-aj78rk

@@ -1,5 +1,5 @@
 current directory: /Users/takigawaatsushi/Documents/environment/softtennis_app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.9/ext/bootsnap
-/Users/takigawaatsushi/.rbenv/versions/2.6.6/bin/ruby -I /Users/takigawaatsushi/.rbenv/versions/2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210201-90874-m30n13.rb extconf.rb
+/Users/takigawaatsushi/.rbenv/versions/2.6.6/bin/ruby -I /Users/takigawaatsushi/.rbenv/versions/2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210201-91126-1t3ixpv.rb extconf.rb
 creating Makefile
 
 current directory: /Users/takigawaatsushi/Documents/environment/softtennis_app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.9/ext/bootsnap
@@ -12,4 +12,4 @@ linking shared-object bootsnap/bootsnap.bundle
 
 current directory: /Users/takigawaatsushi/Documents/environment/softtennis_app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.9/ext/bootsnap
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20210201-90874-1dnkzds/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20210201-91126-53mi0o/bootsnap
