@@ -110,6 +110,7 @@ GEM
     mini_portile2 (2.5.0)
     minitest (5.14.3)
     msgpack (1.4.1)
+    mysql2 (0.5.3)
     nio4r (2.5.4)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
@@ -221,6 +222,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
+  mysql2
   pg
   puma (~> 4.1)
   rails (~> 6.0.3)
