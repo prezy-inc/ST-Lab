@@ -5,7 +5,7 @@ class MatchesController < ApplicationController
   end
 
   def matches
-    @matches=Match.all.order(tournament: "ASC")
+    @matches=Match.all.order(tournament: "ASC").order(round: "ASC")
     @years=Match.pluck(:year).uniq.sort.reverse ##サイドバー
   end
 
