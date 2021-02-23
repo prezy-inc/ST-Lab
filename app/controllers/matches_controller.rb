@@ -23,7 +23,7 @@ class MatchesController < ApplicationController
   def update
     @years=Match.pluck(:year).uniq.sort.reverse ##サイドバー
     Match.find_by(id: params[:id]).update(match_params)
-    @matches=Match.all
+    @matches=Match.all.order(tournament: "ASC").order(round: "DESC").order(order: "ASC")
     render "matches"
   end
 
