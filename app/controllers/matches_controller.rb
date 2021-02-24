@@ -21,7 +21,7 @@ class MatchesController < ApplicationController
   end
 
   def update
-    @years=Match.pluck(:year).uniq.sort.reverse ##サイドバー
+    @years=[2020,2019,2018] ##サイドバー
     Match.find_by(id: params[:id]).update(match_params)
     @matches=Match.all.order(tournament: "ASC").order(round: "DESC").order(order: "ASC")
     render "matches"
