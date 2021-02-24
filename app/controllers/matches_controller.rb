@@ -6,7 +6,7 @@ class MatchesController < ApplicationController
 
   def matches
     @matches=Match.all.order(tournament: "ASC").order(round: "DESC").order(order: "ASC")
-    @years=Match.pluck(:year).uniq.sort.reverse ##サイドバー
+    @years=[2020,2019,2018] ##サイドバー
   end
 
   def create
@@ -17,7 +17,7 @@ class MatchesController < ApplicationController
 
   def edit
     @match=Match.find_by(id: params[:id])
-    @years=Match.pluck(:year).uniq.sort.reverse ##サイドバー
+    @years=[2020,2019,2018] ##サイドバー
   end
 
   def update
