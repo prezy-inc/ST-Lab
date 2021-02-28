@@ -88,6 +88,9 @@
               <% if r==@taikousen %>
                 <div class="round-name">対抗戦</div>
               <% end %>
+              <% if r==@league %>
+                <div class="round-name">リーグ</div>
+              <% end %>
 
               <div class="matches">
                 <% r.each do |m| %>

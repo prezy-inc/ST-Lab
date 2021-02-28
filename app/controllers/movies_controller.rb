@@ -37,7 +37,9 @@ class MoviesController < ApplicationController
     @leagueC=Match.where(tournament: params[:tournament], year: params[:year], round: '13').order(order: "ASC")
     @leagueD=Match.where(tournament: params[:tournament], year: params[:year], round: '14').order(order: "ASC")
     @taikousen=Match.where(tournament: params[:tournament], year: params[:year], round: '20').order(order: "ASC")
-    @rounds=[@finals,@finalleague,@thirdplace,@semifinals,@fifthplace,@seventhplace,@semififthplace,@quarterfinals,@seventh,@sixth,@fifth,@fourth,@third,@second,@first,@leagueA,@leagueB,@leagueC,@leagueD,@taikousen]
+    @league=Match.where(tournament: params[:tournament], year: params[:year], round: '21').order(order: "ASC")
+    @rounds=[@finals,@finalleague,@thirdplace,@semifinals,@fifthplace,@seventhplace,@semififthplace,@quarterfinals,@seventh,@sixth,@fifth,@fourth,@third,@second,@first,@leagueA,@leagueB,@leagueC,@leagueD,@taikousen,@league]
   end
+
 
 end
