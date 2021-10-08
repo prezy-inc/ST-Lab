@@ -30,7 +30,7 @@
           <div class="button">
             <% @tournaments.each do |t| %>
               <div class="button-detail">
-                <%= link_to "#{t}","/movies/#{@y}/#{t}",class: 'button-link' %>
+                <%= link_to "#{@year} #{t}","/movies/#{@y}/#{t}",class: 'button-link' %>
               </div>
             <% end %>
           </div>
