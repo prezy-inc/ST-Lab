@@ -22,8 +22,9 @@
       <div class="main">
         <div class="rallies">
           <% @rallies.each do |r| %>
+            <% r-img=r.url+"/mqdefault.jpg" %>
             <div class="rally">
-              <%= link_to image_tag(r.img, class: "img"), r.url, target: :_blank %>
+              <%= link_to image_tag(r-img, class: "img"), r.url, target: :_blank %>
             </div>
           <% end %>
         </div>
@@ -31,3 +32,4 @@
     </div>
   </body>
 </html>
+
