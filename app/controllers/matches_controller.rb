@@ -1,6 +1,8 @@
 class MatchesController < ApplicationController
   def new_match
     @match=Match.new
+    @match.year=@ex_match.year
+    @match.tournament=@ex_match.tournament
     @years=Match.pluck(:year).uniq.sort.reverse ##サイドバー
   end
 
@@ -10,7 +12,7 @@ class MatchesController < ApplicationController
   end
 
   def create
-    Match.create(match_params)
+    @ex_match=Match.create(match_params)
     redirect_to action: :new_match
     @years=Match.pluck(:year).uniq.sort.reverse ##サイドバー
   end
