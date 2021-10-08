@@ -30,7 +30,7 @@
           <% @matches.each do |m| %>
             <% if m.tournament==t %>
               <div class="tournament">
-                <%= m.year+" "+t %>
+                <%= m.tournament t %>
               </div>
               <div class="round">
                 <% if m.round==100 %>
