@@ -1,9 +1,7 @@
 class MatchesController < ApplicationController
   def new_match
     @match=Match.new
-    if @ex_match==nil
-      
-    else
+    if @ex_match then
       @match.year=@ex_match.year
       @match.tournament=@ex_match.tournament
     end
