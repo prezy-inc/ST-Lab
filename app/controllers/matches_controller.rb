@@ -10,6 +10,7 @@ class MatchesController < ApplicationController
   end
 
   def create
+    @ex_match=Match.create(match_params)
     redirect_to action: :new_match
     @years=Match.pluck(:year).uniq.sort.reverse ##サイドバー
   end
