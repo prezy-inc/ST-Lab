@@ -1,10 +1,6 @@
 class MatchesController < ApplicationController
   def new_match
     @match=Match.new
-    if @ex_match then
-      @match.year=@ex_match.year
-      @match.tournament=@ex_match.tournament
-    end
     @years=Match.pluck(:year).uniq.sort.reverse ##サイドバー
   end
 
